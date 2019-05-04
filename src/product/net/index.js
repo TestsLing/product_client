@@ -17,9 +17,8 @@ class HttpManager {
 
         // 对每一次的请求参数加入 资源标识
 
-
         //默认guid
-        let guid = Constant.defaultGuid;
+        const { guid = Constant.defaultGuid } = parameter;
 
         //默认cryptToken
         let cryptToken = Constant.defaultToken;
@@ -70,7 +69,6 @@ class HttpManager {
         let responseJson = await response.json();
 
         let serverNo = responseJson.ServerNo
-
         if (serverNo === 'SN200') {
             return {
                 success: true,

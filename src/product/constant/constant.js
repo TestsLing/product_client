@@ -9,7 +9,7 @@ export const version = '1.0';
 export const defaultGuid = 'ff0340e9ccab0aca99407185b3286a28';
 export const platform = 2;
 export const defaultToken = 'lawyer';
-export const testGuid = 'f1352ee2b7b64593950ceea2d4ec7a8e';
+export const testGuid = '8b40214b83ee4050b7b2da630739a30e';
 export const servertGuid = "870cd1b8146449cd92b0f59ee1571af7";
 export const imgServerUrl = "https://super-lvshi.oss-cn-beijing.aliyuncs.com/"; //图片服务器地址
 
