@@ -25,10 +25,13 @@ class HttpManager {
 
         let token = 'a6f315199e844344aba75cddab184bd4';
 
+        console.log(parameter);
+        parameter.resource_guid = Constant.resource_guid;
+
         //参数为json字符串
         let param = JSON.stringify(parameter);
 
-        console.log(param);
+
 
         /*计算签名*/
         let hashStr = token.charAt(3) + token.charAt(5) + token.charAt(7);
@@ -65,11 +68,7 @@ class HttpManager {
                 "platform": platform
             })
 
-        console.log(requestParams);
-        console.log(url);
-        let response = await fetch(url, requestParams).catch((e) => {
-            console.log(e);
-        });
+        let response = await fetch(url, requestParams);
         let responseJson = await response.json();
 
         let serverNo = responseJson.ServerNo
